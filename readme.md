@@ -46,8 +46,8 @@ config.json can be auto created in the runtime path.
   "localhost:8125": [ //listening binds. multi listeners can be added.
     {
       "type": "wrapped", //a listener handler types. "wrapped" is assigned to tcp-wrapped server.
-      "wrapper": "frp-dry.top:27143", //the wrapper backend address
-      "local": "/mcsm-ac-server-daemon", //relative base url. handler will auto fix youre website origin to it.
+      "wrapper": "example.com", //the wrapper backend address
+      "local": "/mcsm", //relative base url. handler will auto fix youre website origin to it.
       "remote": "localhost:24444" //remote wrapper request address
     },
     {
