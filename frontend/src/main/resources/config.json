@@ -1,0 +1,28 @@
+{
+  "localhost:11451": [
+    {
+      "type": "wrapped",
+      "wrapper": "frp-era.top:22804",
+      "local": "/",
+      "remote": "localhost:24444"
+    }
+  ],
+  "localhost:11452": [
+    {
+      "type": "direct",
+      "local": "/baidu",
+      "remote": "www.baidu.com"
+    },
+    {
+      "type": "direct",
+      "local": "/map/tc",
+      "remote": "115.159.199.241:8123"
+    },
+    {
+      "type": "wrapped",
+      "wrapper": "frp-era.top:22804",
+      "local": "/map/ac",
+      "remote": "localhost:8123"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'HTCP'
+include 'frontend'
+include 'backend'
+
