@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+apply from: "E:/Java/GradleScripts/build-base.gradle"
+
+applyGlobalScript("Publish/ProjectOutput.gradle")
+applyGlobalScript("/Dependencies.gradle")
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('com.google.code.gson:gson:2.9.1')
+    implementation local("jflogger-0.0.2-1")
+    implementation("io.netty:netty-all:4.1.25.Final")
+}
+
+def local(String lib) {
+    var path = rootDir.getAbsolutePath() + "/libs/" + lib + ".jar"
+    return files(path)
+}
+
+
+jar{
+    archiveBaseName="htcp-frontend";
+    manifest {
+        attributes 'Main-Class': 'me.gb2022.htcp.HTCPFrontend'
+    }
+}
